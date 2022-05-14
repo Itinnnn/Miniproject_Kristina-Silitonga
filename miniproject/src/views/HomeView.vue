@@ -47,7 +47,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/Sale")
+      .get("http://localhost:3200/Sale")
       .then((response) => this.setProducts(response.data))
       .catch((error) => console.log(error))
   },

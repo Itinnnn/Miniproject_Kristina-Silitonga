@@ -9,7 +9,7 @@
       </div>
 
       <div class="row mt-3">
-        <div class="col">
+        <div class="col" max-width="auto">
           <div class="input-group mb-4">
             <input
               v-model="search"
@@ -22,7 +22,7 @@
             />
 
             <div class="input-group mb-4">
-              <span class="input-group-text" id="basic-addon1">
+              <span class="input-group-text" id="basic-addon1" aria-setsize="20px">
                 <b-icon-search></b-icon-search>
               </span>
             </div>
@@ -65,14 +65,14 @@ export default {
     },
     searchProduct() {
       axios
-        .get("http://localhost:3000/products?q="+this.search)
+        .get("http://localhost:3200/products?q="+this.search)
         .then((response) => this.setProducts(response.data))
         .catch((error) => console.log(error));
     },
   },
   mounted() {
     axios
-      .get("http://localhost:3000/products")
+      .get("http://localhost:3200/products")
       .then((response) => this.setProducts(response.data))
       .catch((error) => console.log(error));
   },
