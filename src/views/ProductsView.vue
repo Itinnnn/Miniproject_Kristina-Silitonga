@@ -9,7 +9,7 @@
       </div>
 
       <div class="row mt-3">
-        <div class="col" max-width="auto">
+        <div class="col-10" max-width="auto">
           <div class="input-group mb-4">
             <input
               v-model="search"
@@ -20,12 +20,13 @@
               aria-describedby="basic-addon1"
               @keyup="searchProduct"
             />
-
-            <div class="input-group mb-4">
-              <span class="input-group-text" id="basic-addon1" aria-setsize="20px">
-                <b-icon-search></b-icon-search>
-              </span>
-            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="input-group mb-4">
+            <span class="input-group-text" id="basic-addon1" aria-setsize="20px">
+              <b-icon-search></b-icon-search>
+            </span>
           </div>
         </div>
       </div>

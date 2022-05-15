@@ -63,13 +63,13 @@
                   </td>
                   <td align="center" class="text-danger">
                     <b-icon-trash
-                      @click="hapusKeranjang(keranjang.id)"
+                      @click="() => hapusKeranjang(keranjang.id)"
                     ></b-icon-trash>
                   </td>
                 </tr>
                 <tr>
                   <td colspan="6" align="right">
-                    <strong>Total Harga:</strong>
+                    <strong>Subtotal:</strong>
                   </td>
                   <td align="right">
                     <strong>Rp. {{ totalHarga }}</strong>
@@ -79,6 +79,39 @@
               </tbody>
             </table>
           </div>
+        </div>
+      </div>
+     
+    <div class="row-justify-content">
+      <div class="col-md-4">
+        <form class="mt-4" v-on:submit.prevent>
+          <div class="form-group">
+            <label for="nama"><strong>Nama Lengkap</strong></label>
+            <input type="text" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="alamat"><strong>Alamat Lengkap</strong> </label>
+            <input type="text" class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="noHp"><strong>Alamat Email</strong></label>
+            <input type="text" class="form-control"/>
+          </div>
+
+          <div class="form-group">
+            <label for="noHp"><strong>No Handphone/Whatsapp</strong></label>
+            <input type="text" class="form-control"/>
+          </div>
+           <div class="form-group">
+            <label for="noHp"><strong>Metode Pembayaran</strong></label>
+            <input type="text" class="form-control"/>
+          </div>
+            
+            <button type="submit" class="btn btn-success" @click="checkout">
+              <b-icon-cart></b-icon-cart> Checkout
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -97,11 +130,29 @@ export default {
   data() {
     return {
       keranjangs: [],
+      pesan: [],
     };
   },
   methods: {
     setKeranjangs(data) {
       this.keranjangs = data;
+    },
+    hapusKeranjang(id) {
+      axios
+        .delete("http://localhost:3200/keranjangs/" + id)
+        .then(() => {
+          window.location.reload();
+        })
+        .catch((error) => console.log(error));
+    },
+    checkout() {
+      console.log("Pesan  ", this.pesan);
+       this.keranjangs.map(function (item) {
+              return axios
+                .delete("http://localhost:3200/keranjangs/" + item.id)
+                .catch((error) => console.log(error));
+            });
+      this.$router.push("/pesanan-sukses");
     },
   },
   mounted() {

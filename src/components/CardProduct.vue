@@ -1,5 +1,5 @@
 <template>
-  <div class="card shadow card-product" max-width="100" max-height="100">
+  <div class="card shadow card-product h-100">
   <img :src=" 'assets/images/' + product.gambar" class="card-img-top" alt="..."/>
   <div class="card-body">
     <h5 class="card-title">{{ product.nama}}</h5>

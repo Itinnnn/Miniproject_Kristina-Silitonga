@@ -37,7 +37,7 @@ export default {
     };
   },
   methods: {
-    setJumlah(data) {
+    setProduct(data) {
       this.jumlah_pesanans = data;
     },
   },
