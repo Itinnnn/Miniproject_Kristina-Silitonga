@@ -13,7 +13,8 @@
     "core-js": "^3.8.3",
     "register-service-worker": "^1.7.2",
     "vue": "^2.6.14",
-    "vue-router": "^3.5.3"
+    "vue-router": "^3.5.3",
+    "workbox-cdn": "^5.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

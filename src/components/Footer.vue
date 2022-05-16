@@ -1,6 +1,6 @@
 <template>
   <b-card-footer class="mt-5" footer-bg-variant="info">
-    <div class="container">
+    <div class="container mb-5">
       <div class="row" width="auto">
         <div class="col md-5" align="left">
           <h4>KS.Lab Scientific</h4>
@@ -10,15 +10,15 @@
           </p>
         </div>
         <div class="col md-5" align="right">
-          <p>
-            CONTACT <br />
+          <p><strong>
+            CONTACTS </strong><br />
             082168129023 <br />
             kristinasilitonga825@gmail.com
           </p>
         </div>
         <div class="col md-5" align="center">
-          <p>
-            OUR PRODUCTS <Br /> Lab Furniture <br />
+          <p><strong>
+            OUR PRODUCTS</strong> <Br /> Lab Furniture <br />
             Lab Accessories <br />
             Chemical Materials 
           </p>
