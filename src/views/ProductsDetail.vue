@@ -72,7 +72,7 @@ export default {
     pemesanan() {
       this.pesan.product = this.product;
       axios
-      .post("http://localhost:3200/keranjangs", this.pesan)
+      .post("https://stormy-shelf-20253.herokuapp.com/keranjangs", this.pesan)
       .then(() => {
         this.$router.push({path: "/keranjang"})  
       })
@@ -81,7 +81,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3200/products/" + this.$route.params.id)
+      .get("https://stormy-shelf-20253.herokuapp.com/products/" + this.$route.params.id)
       .then((response) => this.setProduct(response.data))
       .catch((error) => console.log(error));
   },

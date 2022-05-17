@@ -66,14 +66,14 @@ export default {
     },
     searchProduct() {
       axios
-        .get("http://localhost:3200/products?q="+this.search)
+        .get("https://stormy-shelf-20253.herokuapp.com/products?q="+this.search)
         .then((response) => this.setProducts(response.data))
         .catch((error) => console.log(error));
     },
   },
   mounted() {
     axios
-      .get("http://localhost:3200/products")
+      .get("https://stormy-shelf-20253.herokuapp.com/products")
       .then((response) => this.setProducts(response.data))
       .catch((error) => console.log(error));
   },

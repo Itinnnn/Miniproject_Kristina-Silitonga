@@ -139,7 +139,7 @@ export default {
     },
     hapusKeranjang(id) {
       axios
-        .delete("http://localhost:3200/keranjangs/" + id)
+        .delete("https://stormy-shelf-20253.herokuapp.com/keranjangs/" + id)
         .then(() => {
           window.location.reload();
         })
@@ -149,7 +149,7 @@ export default {
       console.log("Pesan  ", this.pesan);
        this.keranjangs.map(function (item) {
               return axios
-                .delete("http://localhost:3200/keranjangs/" + item.id)
+                .delete("https://stormy-shelf-20253.herokuapp.com/keranjangs/" + item.id)
                 .catch((error) => console.log(error));
             });
       this.$router.push("/pesanan-sukses");
@@ -169,7 +169,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3200/keranjangs")
+      .get("https://stormy-shelf-20253.herokuapp.com/keranjangs")
       .then((response) => this.setKeranjangs(response.data))
       .catch((error) => console.log(error));
   },
