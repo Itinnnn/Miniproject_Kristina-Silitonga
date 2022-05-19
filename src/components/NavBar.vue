@@ -43,7 +43,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3200/keranjangs")
+      .get("https://stormy-shelf-20253.herokuapp.com/keranjangs")
       .then((response) => this.setProduct(response.data))
       .catch((error) => console.log(error));
   },

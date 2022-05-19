@@ -154,18 +154,6 @@ export default {
             });
       this.$router.push("/pesanan-sukses");
     },
-    handleClick(){
-    if (!this.namaLengkap) {
-        alert('Nama tidak boleh kosong!')
-        return;
-    }
-
-    if (!this.alamatLengkap) {
-        alert('Alamat lengkap tidak boleh kosong!');
-        return;
-    }
-    // Dan seterusnya dengan variable yang lain
-}
   },
   mounted() {
     axios
